@@ -9,6 +9,8 @@
         public abstract double getBonificacao();
         public abstract void AumentarSalario();
 
+        public string Senha { get; set; }
+
         public Funcionario(string cpf, double salario)
         {
             Cpf = cpf;
@@ -17,6 +19,9 @@
             TotalDeFuncionarios++;
         }
 
-
+        public bool Autenticar(string senha)
+        {
+            return Senha == senha;
+        }
     }
 }

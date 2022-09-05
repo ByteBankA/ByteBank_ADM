@@ -1,8 +1,9 @@
-﻿namespace ByteBank_ADM.Funcionarios
+﻿using ByteBank_ADM.SistemaInterno;
+
+namespace ByteBank_ADM.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Diretor : Autenticavel
     {
-        public string Senha { get; set; }
         public override double getBonificacao()
         {
 
@@ -16,10 +17,6 @@
         public override void AumentarSalario()
         {
             Salario *= 1.15;
-        }
-        public bool Autenticar(string senha)
-        {
-            return Senha == senha;
         }
 
     }

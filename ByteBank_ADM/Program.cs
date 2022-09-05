@@ -50,8 +50,13 @@ void UsarSistema()
     gerenteDeContas.Nome = "Gerente de Contas";
     gerenteDeContas.Senha = "456";
 
+    Funcionario designer = new Designer("123.456.789-01");
+    designer.Nome = "Designer";
+    designer.Senha = "123";
+
     SistemaInterno.Logar(diretor, "123");
     SistemaInterno.Logar(gerenteDeContas, "436");
+
 }
 
 

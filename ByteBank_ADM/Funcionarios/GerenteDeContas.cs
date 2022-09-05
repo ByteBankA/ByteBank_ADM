@@ -1,9 +1,9 @@
-﻿namespace ByteBank_ADM.Funcionarios
-{
-    public class GerenteDeContas : Funcionario
-    {
-        public string Senha { get; set; }
+﻿using ByteBank_ADM.SistemaInterno;
 
+namespace ByteBank_ADM.Funcionarios
+{
+    public class GerenteDeContas : Autenticavel
+    {
         public GerenteDeContas(string cpf) : base(cpf, 4000)
         {
             Console.WriteLine("Criando Diretor de Contas");
@@ -20,9 +20,5 @@
             Salario *= 0.5;
         }
 
-        public bool Autenticar(string senha)
-        {
-            return Senha == senha;
-        }
     }
 }
