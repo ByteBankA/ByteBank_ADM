@@ -6,10 +6,8 @@
         public string? Nome { get; set; }
         public string? Cpf { get; private set; }
         public double Salario { get; protected set; }
-        public virtual double getBonificacao()
-        {
-            return Salario * 0.10;
-        }
+        public abstract double getBonificacao();
+        public abstract void AumentarSalario();
 
         public Funcionario(string cpf, double salario)
         {
@@ -18,9 +16,7 @@
             Console.WriteLine("Criando funcionário");
             TotalDeFuncionarios++;
         }
-        public virtual void AumentarSalario()
-        {
-            Salario *= 1.1;
-        }
+
+
     }
 }

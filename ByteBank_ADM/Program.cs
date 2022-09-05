@@ -21,10 +21,14 @@ void CalcularBonificao()
     GerenteDeContas gerenteDeContas = new GerenteDeContas("456.789.123 - 01");
     gerenteDeContas.Nome = "Gerente de Contas";
 
+    Desenvolvedor desenvolvedor = new Desenvolvedor("567-890-123-01");
+    desenvolvedor.Nome = "Desenvolvedor";
+
     gerenciador.Registrar(designer);
     gerenciador.Registrar(diretor);
     gerenciador.Registrar(auxiliar);
     gerenciador.Registrar(gerenteDeContas);
+    gerenciador.Registrar(desenvolvedor);
 
     Console.WriteLine("Total de bonificação: " + gerenciador.getBonificacao());
 }
