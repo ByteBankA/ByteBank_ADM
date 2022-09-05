@@ -7,5 +7,11 @@
 
             return Salario + base.getBonificacao();
         }
+
+        public Diretor(string cpf) : base(cpf)
+        {
+            Console.WriteLine("Criando diretor");
+        }
+
     }
 }
