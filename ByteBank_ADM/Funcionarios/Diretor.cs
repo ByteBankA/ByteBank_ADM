@@ -2,6 +2,7 @@
 {
     public class Diretor : Funcionario
     {
+        public string Senha { get; set; }
         public override double getBonificacao()
         {
 
@@ -15,6 +16,10 @@
         public override void AumentarSalario()
         {
             Salario *= 1.15;
+        }
+        public bool Autenticar(string senha)
+        {
+            return Senha == senha;
         }
 
     }
