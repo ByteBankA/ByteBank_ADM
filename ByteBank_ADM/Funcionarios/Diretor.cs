@@ -8,9 +8,13 @@
             return Salario + base.getBonificacao();
         }
 
-        public Diretor(string cpf) : base(cpf)
+        public Diretor(string cpf, double salario) : base(cpf, salario)
         {
             Console.WriteLine("Criando diretor");
+        }
+        public override void AumentarSalario()
+        {
+            Salario *= 1.15;
         }
 
     }
