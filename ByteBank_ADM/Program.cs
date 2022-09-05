@@ -45,17 +45,20 @@ void UsarSistema()
     Diretor diretor = new Diretor("234.567.891-01");
     diretor.Nome = "Diretor";
     diretor.Senha = "123";
+    diretor.Login = "D";
+
 
     GerenteDeContas gerenteDeContas = new GerenteDeContas("456.789.123 - 01");
     gerenteDeContas.Nome = "Gerente de Contas";
     gerenteDeContas.Senha = "456";
+    gerenteDeContas.Login = "G";
 
     Funcionario designer = new Designer("123.456.789-01");
     designer.Nome = "Designer";
     designer.Senha = "123";
 
-    SistemaInterno.Logar(diretor, "123");
-    SistemaInterno.Logar(gerenteDeContas, "436");
+    SistemaInterno.Logar(diretor, "D", "123");
+    SistemaInterno.Logar(gerenteDeContas, "G", "456");
 
 }
 

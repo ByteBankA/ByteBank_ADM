@@ -2,9 +2,9 @@
 {
     internal class SistemaInterno
     {
-        public static bool Logar(Autenticavel funcionario, string senha)
+        public static bool Logar(Autenticavel funcionario, string login, string senha)
         {
-            bool usuaarioAutenticado = funcionario.Autenticar(senha);
+            bool usuaarioAutenticado = funcionario.Autenticar(login, senha);
             if (usuaarioAutenticado)
             {
                 Console.WriteLine("Bem vindo ao sistema.");
