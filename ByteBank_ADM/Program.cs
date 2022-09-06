@@ -1,4 +1,5 @@
 ﻿using ByteBank_ADM.Funcionarios;
+using ByteBank_ADM.ParceriaComercial;
 using ByteBank_ADM.SistemaInterno;
 
 Console.WriteLine("Boas Vindas! Você está no ByteBank Admnistração");
@@ -57,8 +58,13 @@ void UsarSistema()
     designer.Nome = "Designer";
     designer.Senha = "123";
 
+    ParceiroComercial parceiroComercial = new ParceiroComercial();
+    parceiroComercial.Login = "P";
+    parceiroComercial.Senha = "123";
+
     SistemaInterno.Logar(diretor, "D", "123");
     SistemaInterno.Logar(gerenteDeContas, "G", "456");
+    SistemaInterno.Logar(parceiroComercial, "P", "123");
 
 }
 
