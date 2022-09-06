@@ -1,8 +1,6 @@
-﻿using ByteBank_ADM.SistemaInterno;
-
-namespace ByteBank_ADM.Funcionarios
+﻿namespace ByteBank_ADM.Funcionarios
 {
-    public class GerenteDeContas : Autenticavel
+    public class GerenteDeContas : FuncionarioAutenticavel
     {
         public GerenteDeContas(string cpf) : base(cpf, 4000)
         {
